@@ -28,6 +28,8 @@ public class EditActivity extends AppCompatActivity {
     }
 
     public void saveEditedText(View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
         Intent intent = new Intent();
         EditText editedText = (EditText) findViewById(R.id.editText);
         intent.putExtra("editedText", editedText.getText().toString());
