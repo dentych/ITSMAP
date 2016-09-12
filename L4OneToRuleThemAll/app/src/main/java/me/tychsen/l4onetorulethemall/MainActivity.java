@@ -32,6 +32,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, RESULT_PICKER);
             }
         });
+
+        btnEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), EditTextActivity.class);
+                startActivityForResult(intent, RESULT_EDITTEXT);
+            }
+        });
+
+        btnSlider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), SliderActivity.class);
+                startActivityForResult(intent, RESULT_SLIDER);
+            }
+        });
     }
 
     @Override
@@ -41,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
         switch (resultCode) {
             case RESULT_PICKER: {
                 String msg = "You picked the value: " + data.getIntExtra("value", 0);
+                Toast t = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+                t.show();
+                break;
+            }
+            case RESULT_EDITTEXT: {
+                String msg = "You picked a lot of values :P (this is not yet implemented)";
                 Toast t = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
                 t.show();
                 break;
