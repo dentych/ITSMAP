@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">I, Android</string>
+    <string name="label_name">Name:</string>
+    <string name="label_no_name_given">No name given</string>
+    <string name="label_id">ID:</string>
+    <string name="label_no_id_given">No ID given</string>
+    <string name="label_android">Android:</string>
+    <string name="label_no_android_given">No</string>
+</resources>
