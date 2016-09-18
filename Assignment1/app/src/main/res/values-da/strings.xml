@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">I, Android</string>
     <string name="label_name">Navn:</string>
     <string name="label_no_name_given">Ingen navn angivet</string>
     <string name="label_id">ID:</string>
@@ -10,4 +11,5 @@
     <string name="no">Nej</string>
     <string name="button_save">Gem</string>
     <string name="button_cancel">Annuller</string>
+    <string name="picture_desc">Profilbilled</string>
 </resources>

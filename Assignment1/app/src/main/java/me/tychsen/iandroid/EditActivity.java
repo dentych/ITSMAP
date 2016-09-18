@@ -48,6 +48,21 @@ public class EditActivity extends AppCompatActivity {
             }
         }
 
+        setupOnClickForButtonSave();
+        setupOnClickForButtonCancel();
+    }
+
+    private void setupOnClickForButtonCancel() {
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_CANCELED);
+                finish();
+            }
+        });
+    }
+
+    private void setupOnClickForButtonSave() {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,14 +71,6 @@ public class EditActivity extends AppCompatActivity {
                 intent.putExtra("id", txtId.getText().toString());
                 intent.putExtra("devStatus", radioYes.isChecked());
                 setResult(RESULT_SUCCESS, intent);
-                finish();
-            }
-        });
-
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(RESULT_CANCELED);
                 finish();
             }
         });
