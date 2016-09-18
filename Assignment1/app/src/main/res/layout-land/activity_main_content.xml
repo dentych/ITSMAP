@@ -9,8 +9,7 @@
         android:id="@+id/imageView"
         android:layout_width="@dimen/image_size"
         android:layout_height="@dimen/image_size"
-        android:layout_marginStart="-40dp"
-        android:background="#ba5b5b" />
+        android:layout_marginStart="-40dp"/>
 
     <RelativeLayout
         android:id="@+id/rl1"
@@ -44,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/rl1"
         android:layout_marginStart="50dp"
-        android:layout_toEndOf="@id/imageView"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/imageView">
 
         <TextView
             android:id="@+id/labelId"
@@ -72,25 +71,25 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/rl2"
         android:layout_marginStart="50dp"
-        android:layout_toEndOf="@id/imageView"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/imageView">
 
         <TextView
             android:id="@+id/labelAndroid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cbAndroid"
             android:text="@string/label_android"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/textColor"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtAndroid"
+        <CheckBox
+            android:id="@+id/cbAndroid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_toEndOf="@id/labelAndroid"
-            android:text="@string/label_no_android_given"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </RelativeLayout>
